@@ -1,16 +1,20 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+
+import Clock from "../components/Clock.vue";
+import SearchBox from "../components/SearchBox.vue";
+import MainContainer from "../components/MainContainer.vue";
 
 defineProps<{ msg: string }>()
 
-const count = ref(0)
 </script>
 
 <template>
   <div class="main background">
     <div class="left"></div>
     <div class="center">
-      <MyDatatime></MyDatatime>
+      <clock></clock>
+      <search-box></search-box>
+        <main-container></main-container>
     </div>
     <div class="right"></div>
   </div>
@@ -22,7 +26,7 @@ const count = ref(0)
   flex-direction: row;
 }
 .background {
-  background-image: url("../assets/catalina.jpg");
+  background-image: url("../assets/images/catalina.jpg");
   background-size: 100% 100%;
   position: fixed;
   top: 0px;
@@ -31,17 +35,14 @@ const count = ref(0)
 }
 .left{
   width: 25%;
-  border: 1px solid red;
   height: 100%;
 }
 .center{
   width: 50%;
-  border: 1px solid blue;
   height: 100%;
 }
 .right{
   width: 25%;
-  border: 1px solid green;
   height: 100%;
 }
 </style>
