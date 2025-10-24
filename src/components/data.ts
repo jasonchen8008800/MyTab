@@ -1,4 +1,4 @@
-import {ref} from "vue";
+import { ref } from "vue";
 
 export const links = ref([
     {
@@ -7,9 +7,28 @@ export const links = ref([
         type: 'app',
         height: 300,
         class: 'g3x4',
-        children:[],
+        childrens: [],
     },
-
+    {
+        id: 2,
+        name: '百度',
+        url: 'https://www.baidu.com',
+        src: "/src/assets/images/icon/372f06a6e36c32e1d3fb04ef29b3c3f1.ico",
+        type: 'link',
+        height: 80,
+        class: 'g1x1',
+        childrens: [],
+    },
+    {
+        id: 3,
+        name: 'google',
+        url: 'https://www.google.com/search?q=',
+        src: "/src/assets/images/icon/a2873399105e35dc9e03e1f85542aeef.png",
+        type: 'link',
+        height: 80,
+        class: 'g1x1',
+        childrens: [],
+    },
     {
         id: 4,
         name: '新建文件夹',
@@ -18,7 +37,7 @@ export const links = ref([
         type: 'fold',
         height: 80,
         class: 'g2x2',
-        children:[
+        childrens: [
             {
                 id: 2,
                 name: '百度',
@@ -27,7 +46,7 @@ export const links = ref([
                 type: 'link',
                 height: 80,
                 class: 'g1x1',
-                children:[],
+                childrens: [],
             },
             {
                 id: 3,
@@ -37,7 +56,7 @@ export const links = ref([
                 type: 'link',
                 height: 80,
                 class: 'g1x1',
-                children:[],
+                childrens: [],
             },
             {
                 id: 2,
@@ -47,7 +66,7 @@ export const links = ref([
                 type: 'link',
                 height: 80,
                 class: 'g1x1',
-                children:[],
+                childrens: [],
             },
             {
                 id: 3,
@@ -57,8 +76,18 @@ export const links = ref([
                 type: 'link',
                 height: 80,
                 class: 'g1x1',
-                children:[],
+                childrens: [],
             },
         ],
-    }
+    },
+    {
+        id: 3,
+        name: '日历',
+        url: '',
+        src: "",
+        type: 'calendar',
+        height: 80,
+        class: 'g4x4',
+        childrens: [],
+    },
 ])

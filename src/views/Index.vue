@@ -3,6 +3,7 @@
 import Clock from "../components/Clock.vue";
 import SearchBox from "../components/SearchBox.vue";
 import MainContainer from "../components/MainContainer.vue";
+import CalendarCard from "../components/CalendarCard.vue";
 
 defineProps<{ msg: string }>()
 
@@ -15,6 +16,7 @@ defineProps<{ msg: string }>()
       <clock></clock>
       <search-box></search-box>
         <main-container></main-container>
+         <!-- <calendar-card></calendar-card> -->
     </div>
     <div class="right"></div>
   </div>

@@ -10,7 +10,7 @@ function jump(){
 <template>
     <div class="link-card" @click="jump()">
         <div class="link-card-icon-box">
-            <a-image class="link-card-icon" :preview="false" :src="item.src"></a-image>
+            <a-image class="link-card-icon" :preview="false" :src="item.src" style=" border-radius: 15px;"></a-image>
         </div>
         <div class="link-card-title">{{item.name}}</div>
     </div>

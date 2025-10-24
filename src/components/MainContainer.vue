@@ -5,6 +5,7 @@ import {VueDraggable, DraggableEvent} from 'vue-draggable-plus'
 import TextNote from "./TextNote.vue";
 import LinkCard from "./LinkCard.vue";
 import FoldCard from "./FoldCard.vue";
+import CalendarCard from "./CalendarCard.vue";
 import {links} from "./data.ts";
 
 const mode = ref<TabsProps['tabPosition']>('top');
@@ -13,7 +14,7 @@ const callback: TabsProps['onTabScroll'] = val => {
     console.log(val);
 };
 
-
+console.log(proxyRefs(links))
 
 
 function onStart(event: DraggableEvent) {
@@ -50,7 +51,7 @@ function onEnd(event: DraggableEvent) {
     let oldCard = links.value[event.oldDraggableIndex];
 
     if (newCard.type=="link" && oldCard.type=="fold"){
-        oldCard.children.push(newCard)
+        oldCard.childrens.push(newCard)
         links.value.splice(event.newDraggableIndex, 1)
     }
 }
@@ -82,7 +83,8 @@ function onEnd(event: DraggableEvent) {
                         <div class="grid-item" :class="item.class" v-for="(item) in links" :key="item.id">
                             <text-note v-if="item.type == 'app'"></text-note>
                             <link-card v-else-if="item.type == 'link'" :item="item"></link-card>
-                            <fold-card v-else-if="item.type == 'fold'" :item="item"></fold-card>
+                            <fold-card v-else-if="item.type == 'fold'" :items="item"></fold-card>
+                            <calendar-card v-else-if="item.type == 'calendar'"></calendar-card>
                         </div>
                     </div>
                 </VueDraggable>
@@ -109,15 +111,7 @@ function onEnd(event: DraggableEvent) {
     flex-wrap: wrap;
 }
 
-.g3x4 {
-    grid-row: span 3 / span 3;
-    grid-column: span 4 / span 4;
-}
 
-.g2x2 {
-    grid-row: span 2 / span 2;
-    grid-column: span 2 / span 2;
-}
 
 .g1x1 {
     height: calc(100% - 5px);
@@ -125,6 +119,20 @@ function onEnd(event: DraggableEvent) {
     grid-column: span 1 / span 1;
 }
 
+.g2x2 {
+    grid-row: span 2 / span 2;
+    grid-column: span 2 / span 2;
+}
+
+.g3x4 {
+    grid-row: span 3 / span 3;
+    grid-column: span 4 / span 4;
+}
+
+.g4x4 {
+    grid-row: span 3 / span 4;
+    grid-column: span 4 / span 4;
+}
 .main-tabs-draggable-item {
     height: 500px;
     overflow-y: scroll;
