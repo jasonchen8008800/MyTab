@@ -6,6 +6,7 @@ import TextNote from "./TextNote.vue";
 import LinkCard from "./LinkCard.vue";
 import FoldCard from "./FoldCard.vue";
 import CalendarCard from "./CalendarCard.vue";
+import CalendarCard2 from "./CalendarCard2.vue";
 import {links} from "./data.ts";
 
 const mode = ref<TabsProps['tabPosition']>('top');
@@ -85,6 +86,7 @@ function onEnd(event: DraggableEvent) {
                             <link-card v-else-if="item.type == 'link'" :item="item"></link-card>
                             <fold-card v-else-if="item.type == 'fold'" :items="item"></fold-card>
                             <calendar-card v-else-if="item.type == 'calendar'"></calendar-card>
+                            <!-- <calendar-card-2 v-else-if="item.type == 'calendar'"></calendar-card-2> -->
                         </div>
                     </div>
                 </VueDraggable>
