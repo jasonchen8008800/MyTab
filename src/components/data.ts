@@ -1,0 +1,64 @@
+import {ref} from "vue";
+
+export const links = ref([
+    {
+        id: 1,
+        name: 'editor',
+        type: 'app',
+        height: 300,
+        class: 'g3x4',
+        children:[],
+    },
+
+    {
+        id: 4,
+        name: '新建文件夹',
+        url: '',
+        src: "",
+        type: 'fold',
+        height: 80,
+        class: 'g2x2',
+        children:[
+            {
+                id: 2,
+                name: '百度',
+                url: 'https://www.baidu.com',
+                src: "/src/assets/images/icon/372f06a6e36c32e1d3fb04ef29b3c3f1.ico",
+                type: 'link',
+                height: 80,
+                class: 'g1x1',
+                children:[],
+            },
+            {
+                id: 3,
+                name: 'google',
+                url: 'https://www.google.com/search?q=',
+                src: "/src/assets/images/icon/a2873399105e35dc9e03e1f85542aeef.png",
+                type: 'link',
+                height: 80,
+                class: 'g1x1',
+                children:[],
+            },
+            {
+                id: 2,
+                name: '百度',
+                url: 'https://www.baidu.com',
+                src: "/src/assets/images/icon/372f06a6e36c32e1d3fb04ef29b3c3f1.ico",
+                type: 'link',
+                height: 80,
+                class: 'g1x1',
+                children:[],
+            },
+            {
+                id: 3,
+                name: 'google',
+                url: 'https://www.google.com/search?q=',
+                src: "/src/assets/images/icon/a2873399105e35dc9e03e1f85542aeef.png",
+                type: 'link',
+                height: 80,
+                class: 'g1x1',
+                children:[],
+            },
+        ],
+    }
+])

@@ -9,4 +9,5 @@ import Index from './views/Index.vue'
 </template>
 
 <style scoped>
+
 </style>
