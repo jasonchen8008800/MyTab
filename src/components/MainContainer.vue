@@ -15,9 +15,6 @@ const callback: TabsProps['onTabScroll'] = val => {
     console.log(val);
 };
 
-console.log(proxyRefs(links))
-
-
 function onStart(event: DraggableEvent) {
     console.log('开始拖拽', event)
 }
