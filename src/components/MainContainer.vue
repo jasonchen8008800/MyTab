@@ -78,12 +78,11 @@ function onEnd(event: DraggableEvent) {
                     target=".grid-box"
                 >
                     <div class="main-tabs-draggable-item grid-box">
-                        <div class="grid-item" :class="item.class" v-for="(item) in links" :key="item.id">
+                        <div class="grid-item" :class="item.class" v-for="(item,index) in links" :key="index">
                             <text-note v-if="item.type == 'app'"></text-note>
                             <link-card v-else-if="item.type == 'link'" :item="item"></link-card>
                             <fold-card v-else-if="item.type == 'fold'" :items="item"></fold-card>
                             <calendar-card v-else-if="item.type == 'calendar'"></calendar-card>
-                            <!-- <calendar-card-2 v-else-if="item.type == 'calendar'"></calendar-card-2> -->
                         </div>
                     </div>
                 </VueDraggable>

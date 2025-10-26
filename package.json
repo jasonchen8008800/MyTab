@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@imengyu/vue3-context-menu": "^1.5.2",
     "ant-design-vue": "^4.2.6",
     "axios": "^1.12.2",
     "less": "^4.4.2",
@@ -25,6 +26,7 @@
     "@types/node": "^24.6.0",
     "@vitejs/plugin-vue": "^6.0.1",
     "@vue/tsconfig": "^0.8.1",
+    "sass-embedded": "^1.93.2",
     "ts-node": "^10.9.2",
     "typescript": "~5.9.3",
     "vite": "^7.1.7",

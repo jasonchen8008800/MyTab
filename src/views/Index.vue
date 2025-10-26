@@ -2,13 +2,55 @@
 import Clock from "../components/Clock.vue";
 import SearchBox from "../components/SearchBox.vue";
 import MainContainer from "../components/MainContainer.vue";
-// import CalendarCard2 from "../components/CalendarCard2.vue";
+import ContextMenu from '@imengyu/vue3-context-menu'
 
-defineProps<{ msg: string }>();
+function onContextMenu(e : MouseEvent) {
+  //prevent the browser's default menu
+  e.preventDefault();
+  //show your menu
+  ContextMenu.showContextMenu({
+    x: e.x,
+    y: e.y,
+    items: [
+      { 
+        label: "添加标签", 
+        onClick: () => {
+          alert("You click a menu item");
+        }
+      },
+      {
+        label: "新建文件夹", 
+        onClick: () => {
+            alert
+        },
+      },
+      {
+        label: "更换壁纸", 
+        onClick: () => {
+            alert
+        },
+      },
+
+      {
+        label: "批量编辑", 
+        onClick: () => {
+            alert
+        },
+      },
+
+      {
+        label: "设置", 
+        onClick: () => {
+            alert
+        },
+      },
+    ]
+  }); 
+}
 </script>
 
 <template>
-    <div class="main background">
+    <div class="main background"  @contextmenu="onContextMenu($event)">
         <div class="left"></div>
         <div class="center">
             <clock></clock>

@@ -11,8 +11,6 @@
                     value: 'id',
                     options: 'children',
                 }"
-                @focus="focus"
-                @change="handleChange"
                 size="large"
             ></a-select>
             <div class="site-input-group">
